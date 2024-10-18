@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-[Provide a brief summary of the project, including the theme and objectives.]
+Survey form for preferred method of transportation
 
 ## Team Members:
 
 -   Diljot Singh Sangha
 -   Harnoor Gill 
--   Name 3
+-   McCauley Armishaw
 
 ## Member Contributions:
 
@@ -20,6 +20,6 @@
 
 -   Styled the form using CSS to ensure a cohesive design.
 
-### Name 3:
+### Name 3: McCauley Armishaw
 
--   Handled [specific sections], covering [specific topics or features].
+-   Handled JavaScript setup, covering input validation and error message handling.
