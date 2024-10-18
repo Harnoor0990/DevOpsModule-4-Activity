@@ -7,7 +7,7 @@
 ## Team Members:
 
 -   Diljot Singh Sangha
--   Name 2
+-   Harnoor Gill 
 -   Name 3
 
 ## Member Contributions:
@@ -18,7 +18,7 @@
 
 ### Name 2:
 
--   Was responsible for [specific tasks], focusing on [specific HTML elements].
+-   Styled the form using CSS to ensure a cohesive design.
 
 ### Name 3:
 
