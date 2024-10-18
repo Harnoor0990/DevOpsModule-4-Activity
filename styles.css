@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5e7c0, #d9c6a0); /* Soft warm brown gradient background */
+    color: #5c4d3b; /* Dark brown text for readability */
+    line-height: 1.6; 
+}
+
+/* Main Container */
+main {
+    max-width: 600px; /* Limit the width */
+    margin: 50px auto; /* Center the main container */
+    padding: 30px; /* Padding around the content */
+    background: #ffffff; /* White background for the form */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    animation: slideIn 0.5s ease-in-out; /* Animation for the main container */
+}
+
+/* Animation for the main container */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header Style */
+h1 {
+    text-align: center; /* Center the header */
+    color: #8B4513; /* Saddle brown for the header */
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 1.8em; /* Slightly larger font size */
+    text-transform: uppercase; /* Uppercase letters */
+}
+
+/* Form Group Style */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+/* Label Style */
+label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text */
+    color: #4e3b31; /* Warm dark brown for labels */
+}
+
+/* Input and Select Styles */
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding inside inputs */
+    border: 2px solid #c3b091; /* Soft tan border color */
+    border-radius: 10px; /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effects */
+}
+
+/* Input Focus Styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #8B4513; /* Darker brown border on focus */
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.7); /* Glow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #d9534f; /* Soft red for errors */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-top: 5px; /* Space above error messages */
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding inside the button */
+    background-color: #8B4513; /* Saddle brown background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.1em; /* Button font size */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background color change */
+}
+
+/* Submit Button Hover Effect */
+input[type="submit"]:hover {
+    background-color: #a0522d; /* Lighter brown on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        margin: 20px; /* Reduced margin for smaller screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Slightly smaller header */
+    }
+}
