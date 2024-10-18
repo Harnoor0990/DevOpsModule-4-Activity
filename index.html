@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Whats Your Preferred Mode of Transport?</h1>
+        <form id="survey-form" action="https://httpbin.org/post" method="post">
+            <div class="form-group">
+                <label for="nameInput">Your Name:</label>
+                <input id="nameInput" name="name" type="text">
+                <span id="nameInput-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="transportType">Mode of Transport:</label>
+                <select id="Type" name="transportType">
+                    <option value="">Please select a mode of transport.</option>
+                    <option value="bus">Car</option>
+                    <option value="bus">Bus</option>
+                    <option value="walk">Walk</option>
+                </select>
+                <span id="transportType-error" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="emailInput">Your Email:</label>
+                <input id="emailInput" name="email" type="email">
+                <span id="emailInput-error" class="error-message"></span>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

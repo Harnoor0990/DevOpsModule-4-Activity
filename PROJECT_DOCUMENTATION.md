@@ -6,15 +6,15 @@
 
 ## Team Members:
 
--   Name 1
+-   Diljot Singh Sangha
 -   Name 2
 -   Name 3
 
 ## Member Contributions:
 
-### Name 1:
+### Name 1: Diljot Singh Sangha
 
--   Worked on [specific elements] of the webpage.
+-   Worked on the HTML elements of the webpage.
 
 ### Name 2:
 
