@@ -1,0 +1,14 @@
+{
+  "name": "transactions-service",
+  "version": "1.0.0",
+  "description": "Transactions microservice for Pixel River Financial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.0.0",
+    "cors": "^2.8.5"
+  }
+}

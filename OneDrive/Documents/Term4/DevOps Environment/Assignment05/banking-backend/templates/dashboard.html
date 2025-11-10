@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pixel River Financial Banking Microservice</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="container mt-5">
+    <h1>
+      Welcome, {{ user.first_name }} {{ user.last_name }} to Pixel River
+      Financial Banking Microservice
+    </h1>
+    <p>Account Balance: ${{ '%.2f'|format(user.balance) }}</p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <form action="/api/deposit" method="POST" class="mb-3">
+      <div class="mb-3">
+        <label for="depositAmount" class="form-label">Deposit Amount</label>
+        <input
+          type="number"
+          step="0.01"
+          class="form-control"
+          id="depositAmount"
+          name="amount"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-success">Deposit</button>
+    </form>
+
+    <form action="/api/withdraw" method="POST" class="mb-3">
+      <div class="mb-3">
+        <label for="withdrawAmount" class="form-label">Withdraw Amount</label>
+        <input
+          type="number"
+          step="0.01"
+          class="form-control"
+          id="withdrawAmount"
+          name="amount"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-danger">Withdraw</button>
+    </form>
+
+    <a href="/api/logout" class="btn btn-secondary">Logout</a>
+
+    <hr class="my-4" />
+
+    <h2>Your Transactions</h2>
+    {% if transactions_by_month %} {% for month, transactions in
+    transactions_by_month.items() %}
+    <h3>{{ month }}</h3>
+    <ul class="list-group mb-3">
+      {% for transaction in transactions %}
+      <li class="list-group-item">
+        {{ transaction.timestamp }}:
+        <strong>{{ transaction.type }}</strong>
+        ${{ '%.2f'|format(transaction.amount) }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %} {% else %}
+    <p>No transactions yet.</p>
+    {% endif %}
+  </body>
+</html>
